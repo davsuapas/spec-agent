@@ -1,4 +1,4 @@
-Sistema de Agentes de Ingeniería de Software - Guía Técnica Principal
+# **Sistema de Agentes de Ingeniería de Software - Guía Técnica Principal**
 
 # 1. Introducción y Propósito del Sistema
 
@@ -6,16 +6,16 @@ Este sistema constituye un ecosistema coordinado de agentes autónomos especiali
 
 Como Ingeniero de Sistemas, debe considerar este documento como su punto de entrada mandatorio y el mapa de navegación operativo. Su propósito es proporcionar la estructura lógica, las reglas de gobernanza y las instrucciones de despliegue necesarias para operar el sistema Kilocode con éxito.
 
-# 2. Índice de Documentación de Referencia
+# 2. Índice de documentos principales
 
-La siguiente tabla centraliza los artefactos críticos del sistema, el agente responsable de su integridad y el propósito técnico de cada uno.
+La siguiente tabla centraliza la documentación detallada de cada agente, el agente responsable de su integridad y el propósito técnico de cada uno.
 
-| Documentación | Agente Responsable                 | Propósito                                                                                                                   |
-| ------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| spec.md       | [@spec/def](agent/spec/def.md)     | Definición funcional agnóstica a la tecnología. Identificación de Unidades Demostrables (DU) y Requisitos Funcionales (RF). |
-| tasks.md      | [@spec/tasks](agent/spec/tasks.md) | Diseño de la arquitectura global, definición de Reglas Técnicas (RT) y descomposición en tareas de ingeniería.              |
-| plan.md       | [@spec/plan](agent/spec/plan.md)   | Plan detallado de implementación técnica para una tarea específica, optimizado para la fase de codificación.                |
-| valid.md      | [@spec/valid](agent/spec/valid.md) | Auditoría final de estados, validación de calidad y verificación de coherencia.                                             |
+| Documentación       | Agente Responsable                 | Propósito                                                                                                                   |
+| ------------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| [spec](doc/spec.md) | [@spec/def](agent/spec/def.md)     | Definición funcional agnóstica a la tecnología. Identificación de Unidades Demostrables (DU) y Requisitos Funcionales (RF). |
+| tasks.md            | [@spec/tasks](agent/spec/tasks.md) | Diseño de la arquitectura global, definición de Reglas Técnicas (RT) y descomposición en tareas de ingeniería.              |
+| plan.md             | [@spec/plan](agent/spec/plan.md)   | Plan detallado de implementación técnica para una tarea específica, optimizado para la fase de codificación.                |
+| valid.md            | [@spec/valid](agent/spec/valid.md) | Auditoría final de estados, validación de calidad y verificación de coherencia.                                             |
 
 # 3. Flujo de Trabajo Operativo (Lifecycle)
 
@@ -39,7 +39,7 @@ Para interactuar con el sistema, se utilizan comandos específicos desde la term
 
 ## Gestión de Cambios y Retroalimentación
 
-La integridad del sistema se protege mediante el comando obligatorio [/spec-cambiar](commands/spec-cambiar.md). Los ingenieros deben utilizar este mecanismo cuando un agente en una fase avanzada detecta inconsistencias o necesidades de refinamiento en documentos previos finalizados, garantizando la agilidad del desarrollo.
+La integridad ágil del sistema se protege mediante el comando obligatorio [/spec-cambiar](commands/spec-cambiar.md). Los ingenieros deben utilizar este mecanismo cuando un agente en una fase avanzada detecta inconsistencias o necesidades de refinamiento en documentos previos finalizados, garantizando la agilidad del desarrollo.
 
 El sistema garantiza la trazabilidad registrando estos cambios en la carpeta `cambios/`, generando archivos específicos según el flujo de retroalimentación:
 
@@ -89,7 +89,7 @@ Tanto en la instalación local como en la global, se debe respetar estrictamente
 
 Es fundamental distinguir entre los archivos de configuración del sistema de agentes y los artefactos de trabajo. Toda la producción de los agentes (las especificaciones y planes generados) se almacena en el directorio `specs/`. Cada funcionalidad se organiza en sub-carpetas numeradas y fechadas (timestamped) para evitar colisiones y mantener un histórico claro.
 
-```
+```text
 PROYECTO_RAIZ/
 ├── .kilo/ (o ~/.config/kilo/)
 │   ├── agent/
