@@ -10,12 +10,12 @@ Como Ingeniero de Sistemas, debe considerar este documento como su punto de entr
 
 La siguiente tabla centraliza la documentación detallada de cada agente, el agente responsable de su integridad y el propósito técnico de cada uno.
 
-| Documentación       | Agente Responsable                 | Propósito                                                                                                                   |
-| ------------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| [spec](doc/spec.md) | [@spec/def](agent/spec/def.md)     | Definición funcional agnóstica a la tecnología. Identificación de Unidades Demostrables (DU) y Requisitos Funcionales (RF). |
-| tasks.md            | [@spec/tasks](agent/spec/tasks.md) | Diseño de la arquitectura global, definición de Reglas Técnicas (RT) y descomposición en tareas de ingeniería.              |
-| plan.md             | [@spec/plan](agent/spec/plan.md)   | Plan detallado de implementación técnica para una tarea específica, optimizado para la fase de codificación.                |
-| valid.md            | [@spec/valid](agent/spec/valid.md) | Auditoría final de estados, validación de calidad y verificación de coherencia.                                             |
+| Documentación         | Agente Responsable                 | Propósito                                                                                                                   |
+| --------------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| [spec](doc/spec.md)   | [@spec/def](agent/spec/def.md)     | Definición funcional agnóstica a la tecnología. Identificación de Unidades Demostrables (DU) y Requisitos Funcionales (RF). |
+| [tasks](doc/tasks.md) | [@spec/tasks](agent/spec/tasks.md) | Diseño de la arquitectura global, definición de Reglas Técnicas (RT) y descomposición en tareas de ingeniería.              |
+| plan.md               | [@spec/plan](agent/spec/plan.md)   | Plan detallado de implementación técnica para una tarea específica, optimizado para la fase de codificación.                |
+| valid.md              | [@spec/valid](agent/spec/valid.md) | Auditoría final de estados, validación de calidad y verificación de coherencia.                                             |
 
 # 3. Flujo de Trabajo Operativo (Lifecycle)
 
