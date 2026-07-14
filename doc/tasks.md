@@ -39,7 +39,7 @@ El agente guía al usuario a través de un proceso iterativo dividido en 12 fase
 
 5. Calidad y Cierre (Fases 9 - 12)
 
-   - Auditoría de Coherencia: Ejecuta el protocolo [@corin](../include/spec/corin.md) para verificar que ninguna decisión técnica contradice las reglas globales del proyecto.
+   - Auditoría de Coherencia: Ejecuta el protocolo [corin](../include/spec/corin.md) para verificar que ninguna decisión técnica contradice las reglas globales del proyecto.
    - Validación de Calidad: Evalúa el documento final contra un checklist de calidad para asegurar que no hay ambigüedades.
    - Finalización: Cambia el estado del documento a "Finalizada" y, si es necesario, propaga cambios a los niveles inferiores (agentes de implementación).
 

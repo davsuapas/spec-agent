@@ -19,7 +19,7 @@ El agente guía al usuario a través de un proceso iterativo dividido en 11 fase
 1. Orientación y Alcance: El agente verifica si hay una especificación activa y evalúa si la idea del usuario tiene el tamaño adecuado para ser un spec (ni trivial ni excesivamente grande).
 2. Definición Narrativa: Se redacta la historia de usuario y sus objetivos de negocio.
 3. Detalle de Comportamiento: Se definen escenarios Dado/Cuando/Entonces y se exploran casos límite.
-4. Formalización y Validación: Se extraen los requisitos y criterios de éxito, se valida la coherencia con el conocimiento global (vía [@corin](../include/spec/corin.md)) y se realiza un control de calidad final.
+4. Formalización y Validación: Se extraen los requisitos y criterios de éxito, se valida la coherencia con el conocimiento global (vía [corin](../include/spec/corin.md)) y se realiza un control de calidad final.
 
 **Gestión de Cambios**: Si la especificación ya estaba cerrada y se reciben solicitudes desde `tasks-spec.md`, el agente fuerza el paso por todas las fases para garantizar que el nuevo cambio no rompa la coherencia de los requisitos ya validados. Como resultado el agente genera un fichero `spec-tasks.md`, donde registra los cambios que el Agente de Tareas debe tener en cuenta para su planificación.
 
@@ -83,8 +83,8 @@ Al finalizar sus fases, el agente genera o modifica los siguientes archivos:
 - `specs/feature/spec.md`: El documento maestro de especificación formalizado.
 - `specs/feature/cambios/spec-tasks.md`: Registro de cambios que el Agente de Tareas debe tener en cuenta para su planificación, solo si existen solicitudes cuando la especificación fue cerrada.
 - `specs/feature/calidad/spec.md`: Informe de validación que certifica que el documento cumple los estándares de calidad.
-- `doc/reglas-globales-negocio.json`: Actualización automática de nuevas o modificación de reglas de negocio (decisiones) detectadas durante la sesión vía el protocolo [@corin](../include/spec/corin.md).
-- `doc/conceptos.json`: Actualización del diccionario global con nuevos términos consensuados vía el protocolo [@corin](../include/spec/corin.md).
+- `doc/reglas-globales-negocio.json`: Actualización automática de nuevas o modificación de reglas de negocio (decisiones) detectadas durante la sesión vía el protocolo [corin](../include/spec/corin.md).
+- `doc/conceptos.json`: Actualización del diccionario global con nuevos términos consensuados vía el protocolo [corin](../include/spec/corin.md).
 
 ## Diferencia entre secciones en `specs/feature/spec.md`
 
