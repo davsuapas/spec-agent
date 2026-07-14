@@ -14,7 +14,7 @@ La siguiente tabla centraliza la documentación detallada de cada agente, el age
 | --------------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | [spec](doc/spec.md)   | [@spec/def](agent/spec/def.md)     | Definición funcional agnóstica a la tecnología. Identificación de Unidades Demostrables (DU) y Requisitos Funcionales (RF). |
 | [tasks](doc/tasks.md) | [@spec/tasks](agent/spec/tasks.md) | Diseño de la arquitectura global, definición de Reglas Técnicas (RT) y descomposición en tareas de ingeniería.              |
-| plan.md               | [@spec/plan](agent/spec/plan.md)   | Plan detallado de implementación técnica para una tarea específica, optimizado para la fase de codificación.                |
+| [plan](doc/plan.md)   | [@spec/plan](agent/spec/plan.md)   | Plan detallado de implementación técnica para una tarea específica, optimizado para la fase de codificación.                |
 | valid.md              | [@spec/valid](agent/spec/valid.md) | Auditoría final de estados, validación de calidad y verificación de coherencia.                                             |
 
 # 3. Flujo de Trabajo Operativo (Lifecycle)
@@ -43,8 +43,8 @@ La integridad ágil del sistema se protege mediante el comando obligatorio [/spe
 
 El sistema garantiza la trazabilidad registrando estos cambios en la carpeta `cambios/`, generando archivos específicos según el flujo de retroalimentación:
 
-* plan_tasks.md: Registra cambios solicitados por [@spec/plan](agent/spec/plan.md) hacia el plan de tareas.
-* tasks_spec.md: Registra cambios solicitados por [@spec/tasks](agent/spec/tasks.md) hacia la especificación funcional.
+* `plan_tasks.md`: Registra cambios solicitados por [@spec/plan](agent/spec/plan.md) hacia el plan de tareas.
+* `tasks_spec.md`: Registra cambios solicitados por [@spec/tasks](agent/spec/tasks.md) hacia la especificación funcional.
 
 ### Detección de Conflictos ([Corin](include/spec/corin.md)/[@Claron](agent/spec/claron.md))
 

@@ -1,6 +1,6 @@
 # **Agente de Planificación de Tareas** (`@spec/tasks`)
 
-El agente `@spec/tasks` actúa como un líder técnico e ingeniero arquitecto. Su misión es recoger una especificación de negocio finalizada y transformarla en un **plan arquitectónico global**, garantizando que la arquitectura sea sólida, coherente con el código existente y **divisible en tareas independientes**.
+El agente [@spec/tasks](../agent/spec/tasks.md) actúa como un líder técnico e ingeniero arquitecto. Su misión es recoger una especificación de negocio finalizada y transformarla en un **plan arquitectónico global**, garantizando que la arquitectura sea sólida, coherente con el código existente y **divisible en tareas independientes**.
 
 # Objetivo: Arquitectura y Descomposición Estratégica
 
@@ -12,7 +12,7 @@ A diferencia del agente de especificación (que define el "qué"), el Agente de 
  
 # Flujo de Trabajo del Agente
 
-El agente guía al usuario a través de un proceso iterativo dividido en 10 fases obligatorias para garantizar la calidad.
+El agente guía al usuario a través de un proceso iterativo dividido en 12 fases obligatorias para garantizar la calidad.
 
 ## Resumen del Flujo
 
@@ -37,7 +37,7 @@ El agente guía al usuario a través de un proceso iterativo dividido en 10 fase
    - Sincronización: Organiza físicamente el proyecto creando las carpetas correspondientes para cada tarea (ej: tasks/T1/).
    - Diagramas Formales: Genera los diagramas definitivos (componentes, secuencia, estados) una vez que el diseño de todas las tareas es firme.
 
-5. Calidad y Cierre (Fases 9 - 11)
+5. Calidad y Cierre (Fases 9 - 12)
 
    - Auditoría de Coherencia: Ejecuta el protocolo [@corin](../include/spec/corin.md) para verificar que ninguna decisión técnica contradice las reglas globales del proyecto.
    - Validación de Calidad: Evalúa el documento final contra un checklist de calidad para asegurar que no hay ambigüedades.
@@ -55,11 +55,11 @@ graph TD
   F3 --> F4[Fase 4 - Descomposición en tareas]
   F4 --> F5_T1[Fase 5 - Plan específico T1]
   F5_T1 -->|Paso 1 bis: ¿conflicto con plan global o RT?| DEC1{¿Cambio?}
-  DEC1 -->|Sí| UPD1[Actualizar TASKS_FILE + Ajustar tarea en curso y revisar anteriores]
+  DEC1 -->|Sí| UPD1[Actualizar tasks.md + Ajustar tarea en curso y revisar anteriores]
   UPD1 --> F5_T2
   DEC1 -->|No| F5_T2[Fase 5 - Plan específico T2]
   F5_T2 -->|Paso 1 bis: ¿conflicto con plan global o RT?| DEC2{¿Cambio?}
-  DEC2 -->|Sí| UPD2[Actualizar TASKS_FILE + Ajustar tarea en curso y revisar anteriores]
+  DEC2 -->|Sí| UPD2[Actualizar tasks + Ajustar tarea en curso y revisar anteriores]
   UPD2 --> F5_TN
   DEC2 -->|No| F5_TN[Fase 5 - Plan específico T3...TN]
   F5_TN --> F6[Fase 6 - Dependencias entre tareas]
@@ -67,7 +67,10 @@ graph TD
   F7 --> F8[Fase 8 - Diagramas del plan global]
   F8 --> F9[Fase 9 - Coherencia técnica]
   F9 --> F10[Fase 10 - Validación de calidad]
-  F10 --> F11[Fase 11 - Revisión final y finalización]
+  F10 --> F11[Fase 11 - Revisión final]
+  F11 -->|¿Solicitud de cambio en tasks?| DEC3{¿Cambio?}
+  DEC3 -->|Sí| F1
+  DEC3 -->|No| F12[Fase 12 - Finalización]
 ```
 
 # Estructura de Archivos del Sistema (Ámbito del Agente)
@@ -90,10 +93,10 @@ PROYECTO_RAIZ/
         ├── calidad/tasks.md     <-- Artefacto salida: Checklist de calidad de tareas
         ├── tasks/               <-- Artefacto salida:: Directorios de tareas (T1, T2...)
         └── cambios/
-            ├── spec-tasks.md    <-- Artefacto entrada: Cambios desde spec
-            ├── plan-tasks.md    <-- Artefacto entrada: Feedback desde el plan
+            ├── spec-tasks.md    <-- Artefacto entrada: Cambios a realizar solicitados por spec
+            ├── plan-tasks.md    <-- Artefacto entrada: Solicitud de cambios desde el plan
             ├── tasks-spec.md    <-- Artefacto salida: Solicitud de cambios a spec
-            └── tasks-plan.md    <-- Artefacto salida: Instrucciones hacia el plan
+            └── tasks-plan.md    <-- Artefacto salida: Cambios a realizar hacia el plan
 ```
 
 # Artefactos de Entrada
@@ -105,6 +108,7 @@ Para realizar su labor de ingeniería, el agente procesa individualmente:
 - `specs/feature/cambios/plan-tasks.md`: Solicitudes de ajuste enviadas por el agente [@spec/plan](../agent/spec/plan.md) tras detectar problemas en el nivel de implementación.
 - `doc/reglas-globales-tecnicas.json`: Restricciones técnicas globales del proyecto que deben cumplirse.
 - [include/bluesprint](../include/bluesprint/bluesprint.md): Guía de patrones de diseño y arquitectura que rige la construcción del software.
+- [calidad/tasks.md:](../include/spec/calidad/tasks.md) Plantilla de checklist de calidad específica para tasks. 
 
 # Artefactos de Salida
 

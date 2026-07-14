@@ -64,8 +64,8 @@ PROYECTO_RAIZ/
         ├── spec.md              <-- Artefacto salida: El documento de especificación generado
         ├── calidad/spec.md      <-- Artefacto salida: Checklist de calidad de la spec
         └── cambios/
-            ├── tasks-spec.md    <-- Artefacto entrada: Cambios desde tareas
-            └── spec-tasks.md    <-- Artefacto salida: Cambios hacia tareas
+            ├── tasks-spec.md    <-- Artefacto entrada: Solicitud de cambios desde tareas
+            └── spec-tasks.md    <-- Artefacto salida: Cambios a realizar en tareas
 ```
 
 # Artefactos de Entrada
@@ -75,7 +75,6 @@ El agente requiere procesar los siguientes archivos de forma individual para con
 - `specs/feature/cambios/tasks-spec.md`: Solicitudes de cambio enviadas por el Agente de Tareas cuando se detectan incoherencias en fases posteriores.
 - `doc/reglas-globales-negocio.json`: Base de conocimiento de reglas de negocio globales (decisiones) para evitar contradicciones.
 - `doc/conceptos.json`: Diccionario de términos globales para asegurar el uso del lenguaje ubicuo.
-- [calidad/instrucciones.md](../include/spec/calidad/instrucciones.md): Protocolo técnico que rige cómo debe validarse el documento.
 - [calidad/spec.md:](../include/spec/calidad/spec.md) Plantilla de checklist de calidad específica para especificaciones.
 
 # Artefactos de Salida
