@@ -45,7 +45,7 @@ graph TD
 
 # Estructura de Archivos del Sistema (Ámbito del Agente)
 
-Para que el agente opere correctamente, interactúa con los siguientes ficheros dentro del ecosistema:
+El agente opera dentro de la siguiente [estructura](../ejemplo/):
 
 ```text
 PROYECTO_RAIZ/

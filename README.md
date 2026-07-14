@@ -17,6 +17,8 @@ La siguiente tabla centraliza la documentación detallada de cada agente, el age
 | [plan](doc/plan.md)   | [@spec/plan](agent/spec/plan.md)   | Plan detallado de implementación técnica para una tarea específica, optimizado para la fase de codificación.                |
 | [valid](doc/valid.md) | [@spec/valid](agent/spec/valid.md) | Auditoría final de estados, validación de calidad y verificación de coherencia.                                             |
 
+En este [directorio](ejemplo/), podemos ver un ejemplo completo de los artefactos de salida, (de una especificación finalizada), generado por los agentes.
+
 # 3. Flujo de Trabajo Operativo (Lifecycle)
 
 ## Ciclo de Vida de Ingeniería

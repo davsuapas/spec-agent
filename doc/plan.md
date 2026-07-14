@@ -66,7 +66,7 @@ graph TD
 
 # Estructura de Archivos del Sistema (Ámbito del Agente)
 
-El agente trabaja de forma aislada dentro de la carpeta de la tarea correspondiente, interactuando con los siguientes ficheros:
+El agente opera dentro de la siguiente [estructura](../ejemplo/)
 
 ```text
 PROYECTO_RAIZ/

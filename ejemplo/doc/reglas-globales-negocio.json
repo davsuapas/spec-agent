@@ -1,0 +1,151 @@
+{
+  "version": "1.0",
+  "ultima_actualizacion": "2026-05-19",
+  "descripcion": "Reglas de negocio globales del proyecto Carisa.",
+  "reglas": [
+    {
+      "id": "BR-001",
+      "version": 1,
+      "fecha_creacion": "2026-05-19",
+      "enunciado": "La propiedad always_load solo puede existir en skills de plataforma (core). Los skills de dominio no pueden declararse con always_load: true bajo ninguna circunstancia.",
+      "excepciones": [],
+      "especificaciones_origen": [
+        "specs/20260519-171403-skill-def-load-reg/spec.md"
+      ],
+      "historial": [
+        {
+          "version": 1,
+          "enunciado": "La propiedad always_load solo puede existir en skills de plataforma (core). Los skills de dominio no pueden declararse con always_load: true bajo ninguna circunstancia.",
+          "excepciones": [],
+          "fecha_creacion": "2026-05-19"
+        }
+      ]
+    },
+    {
+      "id": "BR-002",
+      "version": 1,
+      "fecha_creacion": "2026-05-19",
+      "enunciado": "Al registrar un skill con un id ya existente en el agente, el sistema debe ignorar el registro silenciosamente: no se registra, no se sobrescribe, no se emite error.",
+      "excepciones": [],
+      "especificaciones_origen": [
+        "specs/20260519-171403-skill-def-load-reg/spec.md"
+      ],
+      "historial": [
+        {
+          "version": 1,
+          "enunciado": "Al registrar un skill con un id ya existente en el agente, el sistema debe ignorar el registro silenciosamente: no se registra, no se sobrescribe, no se emite error.",
+          "excepciones": [],
+          "fecha_creacion": "2026-05-19"
+        }
+      ]
+    },
+    {
+      "id": "BR-003",
+      "version": 1,
+      "fecha_creacion": "2026-05-19",
+      "enunciado": "Todo Skill debe definirse con las propiedades obligatorias id, title, description e instructions. La omisión de cualquiera de ellas debe producir un error en tiempo de compilación o, si no es posible, en tiempo de ejecución.",
+      "excepciones": [],
+      "especificaciones_origen": [
+        "specs/20260519-171403-skill-def-load-reg/spec.md"
+      ],
+      "historial": [
+        {
+          "version": 1,
+          "enunciado": "Todo Skill debe definirse con las propiedades obligatorias id, title, description e instructions. La omisión de cualquiera de ellas debe producir un error en tiempo de compilación o, si no es posible, en tiempo de ejecución.",
+          "excepciones": [],
+          "fecha_creacion": "2026-05-19"
+        }
+      ]
+    },
+    {
+      "id": "BR-004",
+      "version": 1,
+      "fecha_creacion": "2026-05-19",
+      "enunciado": "Un skill construido desde markdown con frontmatter correcto pero cuyo cuerpo de instrucciones está vacío o solo contiene whitespace debe ser rechazado con error.",
+      "excepciones": [],
+      "especificaciones_origen": [
+        "specs/20260519-171403-skill-def-load-reg/spec.md"
+      ],
+      "historial": [
+        {
+          "version": 1,
+          "enunciado": "Un skill construido desde markdown con frontmatter correcto pero cuyo cuerpo de instrucciones está vacío o solo contiene whitespace debe ser rechazado con error.",
+          "excepciones": [],
+          "fecha_creacion": "2026-05-19"
+        }
+      ]
+    },
+    {
+      "id": "BR-005",
+      "version": 1,
+      "fecha_creacion": "2026-05-19",
+      "enunciado": "Solo el core de Carisa puede registrar skills de plataforma. El desarrollador de dominio no tiene acceso a este mecanismo de registro interno.",
+      "excepciones": [],
+      "especificaciones_origen": [
+        "specs/20260519-171403-skill-def-load-reg/spec.md"
+      ],
+      "historial": [
+        {
+          "version": 1,
+          "enunciado": "Solo el core de Carisa puede registrar skills de plataforma. El desarrollador de dominio no tiene acceso a este mecanismo de registro interno.",
+          "excepciones": [],
+          "fecha_creacion": "2026-05-19"
+        }
+      ]
+    },
+    {
+      "id": "BR-006",
+      "version": 1,
+      "fecha_creacion": "2026-05-19",
+      "enunciado": "El catálogo de metadatos de skills (id + description) debe excluir los skills con always_load: true. Si no hay skills que listar, debe devolver una lista vacía sin error.",
+      "excepciones": [],
+      "especificaciones_origen": [
+        "specs/20260519-171403-skill-def-load-reg/spec.md"
+      ],
+      "historial": [
+        {
+          "version": 1,
+          "enunciado": "El catálogo de metadatos de skills (id + description) debe excluir los skills con always_load: true. Si no hay skills que listar, debe devolver una lista vacía sin error.",
+          "excepciones": [],
+          "fecha_creacion": "2026-05-19"
+        }
+      ]
+    },
+    {
+      "id": "BR-007",
+      "version": 1,
+      "fecha_creacion": "2026-05-19",
+      "enunciado": "El contenido completo de las instrucciones de un skill no debe formar parte del estado serializado de un workflow de Temporal. Debe obtenerse bajo demanda desde el gestor de skills.",
+      "excepciones": [],
+      "especificaciones_origen": [
+        "specs/20260519-171403-skill-def-load-reg/spec.md"
+      ],
+      "historial": [
+        {
+          "version": 1,
+          "enunciado": "El contenido completo de las instrucciones de un skill no debe formar parte del estado serializado de un workflow de Temporal. Debe obtenerse bajo demanda desde el gestor de skills.",
+          "excepciones": [],
+          "fecha_creacion": "2026-05-19"
+        }
+      ]
+    },
+    {
+      "id": "BR-008",
+      "version": 1,
+      "fecha_creacion": "2026-05-19",
+      "enunciado": "La estructura Skill de dominio y la de plataforma deben ser tipos distintos o usar un mecanismo que imposibilite estructuralmente que un skill de dominio tenga always_load. No debe depender de un chequeo en runtime.",
+      "excepciones": [],
+      "especificaciones_origen": [
+        "specs/20260519-171403-skill-def-load-reg/spec.md"
+      ],
+      "historial": [
+        {
+          "version": 1,
+          "enunciado": "La estructura Skill de dominio y la de plataforma deben ser tipos distintos o usar un mecanismo que imposibilite estructuralmente que un skill de dominio tenga always_load. No debe depender de un chequeo en runtime.",
+          "excepciones": [],
+          "fecha_creacion": "2026-05-19"
+        }
+      ]
+    }
+  ]
+}

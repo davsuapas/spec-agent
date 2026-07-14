@@ -75,7 +75,7 @@ graph TD
 
 # Estructura de Archivos del Sistema (Ámbito del Agente)
 
-El agente opera dentro de la siguiente estructura, gestionando la transición entre los requisitos y la planificación de tareas:
+El agente opera dentro de la siguiente [estructura](../ejemplo/)
 
 ```text
 PROYECTO_RAIZ/

@@ -1,0 +1,147 @@
+{
+  "version": "1.2",
+  "ultima_actualizacion": "2026-06-26",
+  "descripcion": "Reglas técnicas globales del proyecto Carisa.",
+  "reglas": [
+    {
+      "id": "RT-001",
+      "version": 1,
+      "fecha_creacion": "2026-06-16",
+      "enunciado": "Usar derive_builder para implementar cualquier patrón Builder en el proyecto.",
+      "excepciones": [],
+      "especificaciones_origen": [
+        "specs/20260519-171403-skill-def-load-reg/tasks.md"
+      ],
+      "historial": [
+        {
+          "version": 1,
+          "enunciado": "Usar derive_builder para implementar cualquier patrón Builder en el proyecto.",
+          "excepciones": [],
+          "fecha_creacion": "2026-06-16"
+        }
+      ]
+    },
+    {
+      "id": "RT-002",
+      "version": 2,
+      "fecha_creacion": "2026-06-16",
+      "enunciado": "from_markdown debe parsear frontmatter YAML delimitado por --- vía serde-saphyr (última versión disponible) y cuerpo como texto plano sin subdivisiones.",
+      "excepciones": [],
+      "especificaciones_origen": [
+        "specs/20260519-171403-skill-def-load-reg/tasks.md"
+      ],
+      "historial": [
+        {
+          "version": 1,
+          "enunciado": "from_markdown debe parsear frontmatter YAML delimitado por --- vía serde_yml (última versión disponible) y cuerpo como texto plano sin subdivisiones.",
+          "excepciones": [],
+          "fecha_creacion": "2026-06-16",
+          "hasta": "2026-06-23"
+        },
+        {
+          "version": 2,
+          "enunciado": "from_markdown debe parsear frontmatter YAML delimitado por --- vía serde-saphyr (última versión disponible) y cuerpo como texto plano sin subdivisiones.",
+          "excepciones": [],
+          "fecha_creacion": "2026-06-23"
+        }
+      ]
+    },
+    {
+      "id": "RT-003",
+      "version": 1,
+      "fecha_creacion": "2026-06-16",
+      "enunciado": "Todos los errores de cada módulo deben definirse con thiserror.",
+      "excepciones": [],
+      "especificaciones_origen": [
+        "specs/20260519-171403-skill-def-load-reg/tasks.md"
+      ],
+      "historial": [
+        {
+          "version": 1,
+          "enunciado": "Todos los errores de cada módulo deben definirse con thiserror.",
+          "excepciones": [],
+          "fecha_creacion": "2026-06-16"
+        }
+      ]
+    },
+    {
+      "id": "RT-004",
+      "version": 2,
+      "fecha_creacion": "2026-06-16",
+      "enunciado": "Las APIs públicas del crate no deben depender de ningún runtime async concreto ni de tipos de framework.",
+      "excepciones": [],
+      "especificaciones_origen": [
+        "specs/20260519-171403-skill-def-load-reg/tasks.md"
+      ],
+      "historial": [
+        {
+          "version": 1,
+          "enunciado": "Las APIs públicas del crate no deben depender de ningún runtime async concreto ni de tipos de framework. El trait SkillMeta debe usar genéricos, sin async en su definición.",
+          "excepciones": [],
+          "fecha_creacion": "2026-06-16",
+          "hasta": "2026-06-26"
+        },
+        {
+          "version": 2,
+          "enunciado": "Las APIs públicas del crate no deben depender de ningún runtime async concreto ni de tipos de framework.",
+          "excepciones": [],
+          "fecha_creacion": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "id": "RT-005",
+      "version": 1,
+      "fecha_creacion": "2026-06-16",
+      "enunciado": "El módulo debe compilar y ejecutar todos sus tests sin dependencia de Temporal, Qdrant, red ni base de datos.",
+      "excepciones": [],
+      "especificaciones_origen": [
+        "specs/20260519-171403-skill-def-load-reg/tasks.md"
+      ],
+      "historial": [
+        {
+          "version": 1,
+          "enunciado": "El módulo debe compilar y ejecutar todos sus tests sin dependencia de Temporal, Qdrant, red ni base de datos.",
+          "excepciones": [],
+          "fecha_creacion": "2026-06-16"
+        }
+      ]
+    },
+    {
+      "id": "RT-006",
+      "version": 1,
+      "fecha_creacion": "2026-06-16",
+      "enunciado": "SkillManager debe ser Send + Sync + 'static y estar diseñado para compartirse vía Arc desde contextos asíncronos (tokio). Sus métodos deben ser síncronos. El mecanismo de sincronización interna es detalle de implementación.",
+      "excepciones": [],
+      "especificaciones_origen": [
+        "specs/20260519-171403-skill-def-load-reg/tasks.md"
+      ],
+      "historial": [
+        {
+          "version": 1,
+          "enunciado": "SkillManager debe ser Send + Sync + 'static y estar diseñado para compartirse vía Arc desde contextos asíncronos (tokio). Sus métodos deben ser síncronos. El mecanismo de sincronización interna es detalle de implementación.",
+          "excepciones": [],
+          "fecha_creacion": "2026-06-16"
+        }
+      ]
+    },
+    {
+      "id": "RT-007",
+      "version": 1,
+      "fecha_creacion": "2026-06-16",
+      "enunciado": "Usar serde para toda serialización en el proyecto.",
+      "excepciones": [],
+      "especificaciones_origen": [
+        "specs/20260519-171403-skill-def-load-reg/tasks.md"
+      ],
+      "historial": [
+        {
+          "version": 1,
+          "enunciado": "Usar serde para toda serialización en el proyecto.",
+          "excepciones": [],
+          "fecha_creacion": "2026-06-16"
+        }
+      ]
+    }
+  ]
+}

@@ -63,7 +63,7 @@ graph TD
 
 # Estructura de Archivos del Sistema (Ámbito del Agente)
 
-El agente Validador tiene permisos de lectura sobre todo el directorio de la funcionalidad y los recursos globales:
+El agente opera dentro de la siguiente [estructura](../ejemplo/):
 
 ```text
 PROYECTO_RAIZ/

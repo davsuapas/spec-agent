@@ -1,0 +1,79 @@
+{
+  "version": "1.0",
+  "ultima_actualizacion": "2026-05-19",
+  "descripcion": "Diccionario de conceptos de dominio del proyecto Carisa.",
+  "conceptos": [
+    {
+      "id": "C-001",
+      "version": 1,
+      "termino": "Skill (Plataforma)",
+      "definicion": "Unidad de conocimiento definida internamente por el core de Carisa. Propiedades: id, title, description, instructions, always_load (bool). Solo el core puede instanciar y registrar skills de este tipo. Algunos llevan always_load: true y se cargan automáticamente al iniciar la sesión.",
+      "sinonimos": ["skill de core", "skill de plataforma", "core skill"],
+      "especificaciones_que_usan": [
+        "specs/20260519-171403-skill-def-load-reg/spec.md"
+      ],
+      "fecha_creacion": "2026-05-19",
+      "historial": [
+        {
+          "version": 1,
+          "definicion": "Unidad de conocimiento definida internamente por el core de Carisa. Propiedades: id, title, description, instructions, always_load (bool). Solo el core puede instanciar y registrar skills de este tipo. Algunos llevan always_load: true y se cargan automáticamente al iniciar la sesión.",
+          "fecha_creacion": "2026-05-19"
+        }
+      ]
+    },
+    {
+      "id": "C-002",
+      "version": 1,
+      "termino": "Skill (Dominio)",
+      "definicion": "Unidad de conocimiento definida por el desarrollador de dominio. Propiedades: id, title, description, instructions. No tiene acceso a la propiedad always_load. Se registra a través de la API pública del agente y solo se carga bajo demanda durante la sesión.",
+      "sinonimos": ["skill de dominio", "domain skill"],
+      "especificaciones_que_usan": [
+        "specs/20260519-171403-skill-def-load-reg/spec.md"
+      ],
+      "fecha_creacion": "2026-05-19",
+      "historial": [
+        {
+          "version": 1,
+          "definicion": "Unidad de conocimiento definida por el desarrollador de dominio. Propiedades: id, title, description, instructions. No tiene acceso a la propiedad always_load. Se registra a través de la API pública del agente y solo se carga bajo demanda durante la sesión.",
+          "fecha_creacion": "2026-05-19"
+        }
+      ]
+    },
+    {
+      "id": "C-003",
+      "version": 1,
+      "termino": "Gestor de Skills",
+      "definicion": "Componente que mantiene los skills registrados para un agente y expone dos operaciones: catálogo de metadatos (id + description, excluyendo skills con always_load: true) y carga de instrucciones completas por id. Opera dentro del contexto de un agente. El catálogo proporciona id + description para que el agente decida qué skills cargar bajo demanda.",
+      "sinonimos": ["skill manager", "gestor de skills"],
+      "especificaciones_que_usan": [
+        "specs/20260519-171403-skill-def-load-reg/spec.md"
+      ],
+      "fecha_creacion": "2026-05-19",
+      "historial": [
+        {
+          "version": 1,
+          "definicion": "Componente que mantiene los skills registrados para un agente y expone dos operaciones: catálogo de metadatos (id + description, excluyendo skills con always_load: true) y carga de instrucciones completas por id. Opera dentro del contexto de un agente. El catálogo proporciona id + description para que el agente decida qué skills cargar bajo demanda.",
+          "fecha_creacion": "2026-05-19"
+        }
+      ]
+    },
+    {
+      "id": "C-004",
+      "version": 1,
+      "termino": "Agente",
+      "definicion": "Contenedor de skills sobre el que se realiza el registro. El gestor de skills opera dentro del contexto de un agente. Es una entidad externa cuya definición completa no forma parte de esta especificación.",
+      "sinonimos": ["agent"],
+      "especificaciones_que_usan": [
+        "specs/20260519-171403-skill-def-load-reg/spec.md"
+      ],
+      "fecha_creacion": "2026-05-19",
+      "historial": [
+        {
+          "version": 1,
+          "definicion": "Contenedor de skills sobre el que se realiza el registro. El gestor de skills opera dentro del contexto de un agente. Es una entidad externa cuya definición completa no forma parte de esta especificación.",
+          "fecha_creacion": "2026-05-19"
+        }
+      ]
+    }
+  ]
+}
