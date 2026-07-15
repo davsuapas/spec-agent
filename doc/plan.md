@@ -20,7 +20,7 @@ El agente guía al usuario a través de un proceso iterativo dividido en 6 fases
 
 1. Verificación y Selección (Fases 0 - 1)
 
-   - Validación de entrada: Antes de comenzar, el agente verifica que el plan de tareas global (tasks.md) existe y tiene el estado "Finalizada".
+   - Validación de entrada: Antes de comenzar, el agente verifica que el plan de tareas global (`tasks.md`) existe y tiene el estado "Finalizada".
    - Elegibilidad: El agente identifica qué tareas pueden iniciarse; una tarea es elegible solo si no tiene predecesoras o si todas sus tareas predecesoras están marcadas como "Implementada".
    - Gestión de Cambios: Se leen las instrucciones pendientes en `tasks-plan.md` para integrar cualquier ajuste solicitado por el Agente de Tareas.
 

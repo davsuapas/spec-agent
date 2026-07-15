@@ -33,7 +33,7 @@ graph TD
 ```
 
 ## Control del ciclo
-Para interactuar con el sistema, se utilizan comandos específicos desde la terminal de Kilocode:
+Para interactuar con el sistema, se utilizan comandos específicos desde la terminal de [Kilocode](#plataforma-kilocode):
 - Inicio: Para crear una nueva especificación desde cero, ejecuta el comando [/spec-crear](commands/spec-crear.md) desde el agente .
 - Activación: Para retomar el trabajo en una funcionalidad existente, ejecuta [/spec-activar](commands/spec-activar.md)  desde cualquier agente.
 
@@ -81,7 +81,7 @@ Para que el ecosistema funcione, los archivos de configuración deben residir en
   - Linux: `.config/kilo/`.
   - Windows: `%APPDATA%\kilo` (o la ruta equivalente de configuración de aplicaciones).
 
-Tanto en la instalación local como en la global, se debe respetar estrictamente la siguiente jerarquía (copie las siguientes carpetas a la ruta de su proyecto o la ruta global de kilocode, teniendo en cuenta las ubicaciones establecidas anteriormente):
+Tanto en la instalación local como en la global, se debe respetar estrictamente la siguiente jerarquía; copie las siguientes carpetas a la ruta de su proyecto o la ruta global de [kilocode](https://kilo.ai/), teniendo en cuenta las ubicaciones establecidas anteriormente:
 
 - [agent/](agent/): Definiciones de agentes (spec.md, tasks.md, plan.md, valid.md, claron.md).
 - [commands/](commands/): Scripts de comandos operativos (spec-crear.md, spec-activar.md, spec-cambiar.md).
