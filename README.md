@@ -46,7 +46,7 @@ Con esa idea en mente he desarrollado, de forma modesta, **Spec-Agent**, un proy
 
 Mi objetivo no era sustituir las metodologías ágiles, sino incorporar dentro de ellas algunas de las fortalezas de la ingeniería tradicional: especificaciones, trazabilidad y memoria de las decisiones.
 
-La plataforma está formada por un conjunto de agentes especializados (`@spec/def`, `@spec/plan`, `@spec/tasks` y `@spec/valid`) que acompañan al desarrollador durante todo el flujo de trabajo.
+La plataforma está formada por un conjunto de agentes especializados (`@spec/def`, `@spec/tasks`, `@spec/plan` y `@spec/valid`) que acompañan al desarrollador durante todo el flujo de trabajo.
 
 No toman las decisiones por nosotros, nos ayudan a tomarlas mejor.
 
