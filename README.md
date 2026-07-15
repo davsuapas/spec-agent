@@ -1,10 +1,58 @@
-# **Sistema de Agentes de Ingeniería de Software - Guía Técnica Principal**
+# **Sistema de Agentes de Ingeniería de Software**
 
 # 1. Introducción y Propósito del Sistema
 
-Este sistema constituye un ecosistema coordinado de agentes autónomos especializados (@spec/def, @spec/tasks, @spec/plan, @spec/valid), diseñado para transformar requisitos de negocio abstractos en planes de implementación técnicos rigurosamente validados. A diferencia de los flujos de desarrollo convencionales, este entorno garantiza la trazabilidad absoluta y la coherencia arquitectónica mediante un ciclo de vida cerrado y auditorías automáticas de conocimiento.
+Durante años hemos discutido qué metodología es mejor: la ingeniería tradicional o las metodologías ágiles.
 
-Como Ingeniero de Sistemas, debe considerar este documento como su punto de entrada mandatorio y el mapa de navegación operativo. Su propósito es proporcionar la estructura lógica, las reglas de gobernanza y las instrucciones de despliegue necesarias para operar el sistema Kilocode con éxito.
+Las metodologías tradicionales priorizan una planificación exhaustiva y una ingeniería de requisitos sólida antes de empezar a desarrollar. Las metodologías ágiles, por el contrario, apuestan por la adaptación continua, las iteraciones cortas y la entrega rápida de valor.
+
+La realidad es que **ninguna de las dos es mejor por sí sola**. Todo depende del nivel de incertidumbre del proyecto.
+
+El problema aparece cuando llevamos la agilidad al extremo.
+
+En muchos equipos hemos confundido **ser ágiles con dejar de documentar**. La presión por entregar software rápidamente hace que muchas decisiones funcionales y arquitectónicas nunca queden registradas. Al principio no parece un problema, pero cuando el proyecto crece, cambia de manos o evoluciona durante años, empiezan a aparecer contradicciones, deuda técnica y una pérdida de conocimiento que puede llegar a comprometer el proyecto.
+
+Todos hemos escuchado alguna vez la pregunta:
+
+> *"¿Por qué se hizo así?"*
+
+Y la respuesta suele ser el silencio.
+
+Creo que la llegada de los agentes de IA cambia por completo este escenario.
+
+Por primera vez podemos recuperar una de las mejores prácticas de la ingeniería tradicional —las especificaciones— sin renunciar a la velocidad y flexibilidad de las metodologías ágiles.
+
+Las especificaciones ya no tienen por qué ser documentos estáticos que nadie vuelve a leer. Pueden convertirse en artefactos vivos que evolucionan junto con el software.
+
+Los agentes pueden ayudarnos a transformar ideas ambiguas en especificaciones claras, detectar inconsistencias, validar requisitos, mantener la coherencia entre decisiones y preservar el conocimiento del proyecto durante todo su ciclo de vida.
+
+Para mí, esa es una de las mayores aportaciones de la IA al desarrollo de software. No escribir código, sino ayudarnos a **pensar mejor antes de escribirlo**.
+
+Sin embargo, también creo que estamos cometiendo un error importante.
+
+Cada vez veo más organizaciones intentando que perfiles exclusivamente de negocio, sin experiencia en ingeniería del software, desarrollen aplicaciones completas con IA con el objetivo de reducir costes. El problema no es la IA. El problema es pensar que la ingeniería deja de ser necesaria.
+
+Las consecuencias aparecen cuando el software llega a producción.
+
+*"La IA lo preparó para Azure y nuestro despliegue era on-premise."*
+
+O cuando nadie es capaz de explicar por qué se tomaron determinadas decisiones arquitectónicas.
+
+La IA puede generar código extraordinariamente rápido, pero sigue necesitando contexto, criterio y supervisión. Poner una herramienta tan potente en manos de quien no entiende los principios de la ingeniería del software es asumir riesgos que, tarde o temprano, terminan pagando los proyectos.
+
+Los ingenieros no desaparecen, al contrario, la IA convierte a un buen ingeniero en un profesional todavía más capaz.
+
+Con esa idea en mente he desarrollado, de forma modesta, **Spec-Agent**, un proyecto *open source* inspirado en Spec Kit, pero con un enfoque diferente.
+
+Mi objetivo no era sustituir las metodologías ágiles, sino incorporar dentro de ellas algunas de las fortalezas de la ingeniería tradicional: especificaciones, trazabilidad y memoria de las decisiones.
+
+La plataforma está formada por un conjunto de agentes especializados (`@spec/def`, `@spec/plan`, `@spec/tasks` y `@spec/valid`) que acompañan al desarrollador durante todo el flujo de trabajo.
+
+No toman las decisiones por nosotros, nos ayudan a tomarlas mejor.
+
+Además, incorpora una memoria semántica basada en reglas de decisión que permite conservar el conocimiento arquitectónico del proyecto para que tanto personas como agentes puedan reutilizarlo en el futuro, evitando repetir errores y manteniendo la coherencia incluso cuando el proyecto evoluciona durante años.
+
+En mi opinión, el futuro del desarrollo de software no pasa por elegir entre metodologías tradicionales, metodologías ágiles o inteligencia artificial, pasa por combinar lo mejor de las tres.
 
 # 2. Índice de documentos principales
 
